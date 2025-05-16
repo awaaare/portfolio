@@ -1,3 +1,22 @@
 {
-    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
-}
+    "builds": [
+      {
+        "src": "src/app/page.tsx",
+        "use": "@vercel/next"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "src/app/page.tsx"
+      }
+    ],
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.html" 
+        }
+    ]
+  }
+  
+
