@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio | Портфолио
 
-## Getting Started
+- Next.js + TypeScript + Tailwind CSS портфолио с частицами на Simplex Noise.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Использование
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**✔ Можно**:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Использовать элементы дизайна для вдохновения
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Реализовывать аналогичный функционал
 
-## Learn More
+- Изучать архитектуру кода
 
-To learn more about Next.js, take a look at the following resources:
+- Брать фрагменты кода за основу для ссылок
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**✖ Нельзя**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Копировать персональные данные
 
-## Deploy on Vercel
+- Заимствовать текстовые материалы
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Использовать личные фото, видео и другие медиафайлы
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Полностью дублировать проект
+
+- Применять в коммерческих целях без согласия
+## Usage Rights
+
+**✔ Allowed**:
+
+- Drawing inspiration from design elements
+
+- Implementing similar functionality
+
+- Learning from the code structure
+
+- Using code snippets as a reference
+
+**✖ Prohibited**:
+
+- Directly copying personal information
+
+- Reproducing textual content
+
+- Using private images and media
+
+- Fully cloning the project
+
+- Commercial use without permission
+
+## License
+
+© 2025 Aware. All rights reserved.
+
