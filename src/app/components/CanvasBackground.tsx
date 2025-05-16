@@ -2,6 +2,8 @@
 /** @jsxImportSource @emotion/react */
 
 import { useEffect } from 'react'
+import * as SimplexNoiseModule from 'simplex-noise';
+const SimplexNoise = (SimplexNoiseModule as any).default || SimplexNoiseModule;
 
 // TypeScript типы
 declare global {
@@ -55,7 +57,7 @@ export default function CanvasBackground() {
 
     function initCircles() {
       circleProps = new Float32Array(circlePropsLength);
-      simplex = new window.SimplexNoise();
+      simplex = new SimplexNoise();
       baseHue = 220;
 
       for (let i = 0; i < circlePropsLength; i += circlePropCount) {
