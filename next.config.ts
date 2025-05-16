@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true, // Отключает оптимизацию изображений (обязательно для static export)
+  },
+  trailingSlash: true,
   reactStrictMode: true,
   compiler: {
     styledComponents: true 

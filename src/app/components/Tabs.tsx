@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image';
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState("About")
@@ -22,7 +21,7 @@ export default function Tabs() {
                 key={skill} 
                 className="skill-item flex items-center justify-center gap-2 bg-white/20 px-4 py-1 rounded-lg text-white text-base transition-transform duration-300 ease-in-out hover:scale-105"
               >
-                <Image
+                <img
                   src={`/images/${skill.toLowerCase()}.png`} 
                   alt={`${skill} Icon`} 
                   className="w-7 h-7"
@@ -54,7 +53,7 @@ export default function Tabs() {
             } text-white px-4 py-2 rounded-2xl cursor-pointer transition-all duration-300 ease-in-out hover:bg-white/40 hover:scale-105`}
             onClick={() => setActiveTab(tab)}
           >
-            <Image
+            <img
               src={`/images/${tab.toLowerCase()}.png`} 
               alt={`${tab} Icon`} 
               className="w-5 h-5"
