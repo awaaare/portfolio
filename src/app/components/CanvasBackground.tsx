@@ -2,17 +2,11 @@
 /** @jsxImportSource @emotion/react */
 
 import { useEffect } from 'react'
-import * as SimplexNoiseModule from 'simplex-noise';
-const SimplexNoise = (SimplexNoiseModule as any).default || SimplexNoiseModule;
+import { createNoise2D } from 'simplex-noise';
 
 // TypeScript типы
 declare global {
   interface Window {
-    SimplexNoise: {
-      new (): {
-        noise3D: (x: number, y: number, z: number) => number;
-      };
-    };
     TAU: number;
   }
 }
@@ -31,7 +25,6 @@ export default function CanvasBackground() {
     const rangeHue = 60;
     const xOff = 0.0015;
     const yOff = 0.0015;
-    const zOff = 0.0015;
     const backgroundColor = 'hsla(0,0%,5%,1)';
 
     let container: HTMLElement;
@@ -41,9 +34,7 @@ export default function CanvasBackground() {
       b: CanvasRenderingContext2D 
     };
     let circleProps: Float32Array;
-    let simplex: {
-      noise3D: (x: number, y: number, z: number) => number;
-    };
+    let noise2D: (x: number, y: number) => number;
     let baseHue: number;
 
     window.TAU = 2 * Math.PI;
@@ -57,7 +48,7 @@ export default function CanvasBackground() {
 
     function initCircles() {
       circleProps = new Float32Array(circlePropsLength);
-      simplex = new SimplexNoise();
+      noise2D = createNoise2D();
       baseHue = 220;
 
       for (let i = 0; i < circlePropsLength; i += circlePropCount) {
@@ -68,7 +59,7 @@ export default function CanvasBackground() {
     function initCircle(i: number) {
       const x = rand(canvas.a.width);
       const y = rand(canvas.a.height);
-      const n = simplex.noise3D(x * xOff, y * yOff, baseHue * zOff);
+      const n = noise2D(x * xOff, y * yOff);
       const t = rand(window.TAU);
       const speed = baseSpeed + rand(rangeSpeed);
       const vx = speed * Math.cos(t);
